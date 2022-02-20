@@ -1,0 +1,35 @@
+{
+  "name": "epicus",
+  "version": "1.0.0",
+  "description": "Command parsers for text chat applications.",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squikjs/epicus.git"
+  },
+  "keywords": [
+    "epicus",
+    "command",
+    "parser",
+    "chat",
+    "discord"
+  ],
+  "author": "squikjs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/squikjs/epicus/issues"
+  },
+  "homepage": "https://github.com/squikjs/epicus#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.18",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  }
+}
