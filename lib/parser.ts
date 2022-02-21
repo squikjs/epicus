@@ -1,6 +1,6 @@
 import { Plugin } from "./plugin";
 
-export type Command = string | undefined;
+export type Command = string;
 export type Args = string[];
 
 export interface CommandParserOpts {
@@ -42,7 +42,7 @@ export class CommandParser {
     if (!str.startsWith(this.prefix)) return { success: false };
 
     let args: Args = str.slice(this.prefix.length).trim().split(this.delimiter);
-    let command: Command = args.shift();
+    let command: Command = args.shift() || "";
 
     for (let plugin of this.plugins.sort((a, b) => b.priority - a.priority)) {
       let values = plugin.func(command, args, {

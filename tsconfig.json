@@ -10,5 +10,5 @@
     "removeComments": true,
     "declaration": true,
   },
-  "exclude": ["tests"]
+  "exclude": ["tests", "examples"]
 }

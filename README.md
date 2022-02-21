@@ -32,14 +32,13 @@ let str = "!hunt unicorn";
 parser.parse(str); // { success: true, command: "hunt", args: ["unicorn"] }
 
 // Creating a new plugin
-let Unicorns = = new Plugin((command, args) => {
-    return { success: true, command, args: args.map((arg) => arg.replace(/unicorn/g, "🦄")) };
+let Unicorns = new Plugin((command, args) => {
+  return { success: true, command, args: args.map((arg) => arg.replace(/unicorn/g, "🦄")) };
 });
 
 // Plugging it
 parser.plug(Unicorns);
 parser.parse(str); // { success: true, command: "hunt", args: ["🦄"] }
-
 ```
 
 ## API
